@@ -1,3 +1,3 @@
 <?php
 
-echo "This is the home page";
+include("../private/core/app.php");
