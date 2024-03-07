@@ -2,6 +2,7 @@
 
 require("../private/core/autoload.php");
 
+$app = new App();
 
 /*
 RewriteEngine On: This directive turns on the URL rewriting engine provided by Apache's mod_rewrite module.
