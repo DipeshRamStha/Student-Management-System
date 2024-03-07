@@ -13,14 +13,14 @@
   public function __construct()
   {
 
-    print_r($this->getURL());
+    $URL = $this->getURL();
 
   }
 
   private function getURL()
   {
-    echo "<pre>";
-    print_r($_GET);
+    $url = isset($_GET['url']) ? $_GET['url'] : "home";
+    return explode("/", filter_var(trim('url',"/")), FILTER_SANITIZE_URL);
   }
 
  }
