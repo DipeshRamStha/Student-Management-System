@@ -17,10 +17,16 @@
     if(file_exists("../private/controllers/".$URL[0].".php")){
 
       $this->controller = $URL[0];
+      unset($URL[0]);
     }
 
     require "../private/controllers/".$this->controller.".php";
     $this->controller = new $this->controller();
+
+    if(method_exists($this->controller, $URL[1]))
+    {
+      
+    }
 
   }
 
