@@ -2,7 +2,7 @@
 
 class Students extends Controller
 {
-  function __construct()
+  function index()
   {
     echo "This is the students controller";
   }
