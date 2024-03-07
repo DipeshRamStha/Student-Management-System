@@ -19,6 +19,9 @@
       $this->controller = $URL[0];
     }
 
+    require "../private/controllers/".$this->controller.".php";
+    $this->controller = new $this->controller();
+
   }
 
   private function getURL()
