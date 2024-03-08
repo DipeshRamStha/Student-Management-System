@@ -11,7 +11,7 @@ class Controller
     {
       require("../private/views/" . $view . ".view.php");
     }else{
-      require("../private/views/404.php");
+      require("../private/views/404.view.php");
     }
   }
 }
