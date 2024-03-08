@@ -2,8 +2,12 @@
 
 class Students extends Controller
 {
-  function index()
+  /* 
+  To remove the error even if we do not pass any parameter to the index method, we write
+  $id = ''
+  */
+  function index($id = null)
   {
-    echo "This is the students controller";
+    echo "This is the students controller". $id;
   }
 }
