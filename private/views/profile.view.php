@@ -5,8 +5,10 @@
 
     <h4>Profile</h4>
     <div class="row">
-      <div class="col-4"></div>
-      <div class="col-auto bg-secondary"></div>
+      <div class="col-4">
+        <img src="<?=ASSETS?>/user_female.jpg">
+      </div>
+      <div class="col-8 bg-secondary"></div>
     </div>
 
   </div>
