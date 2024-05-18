@@ -15,7 +15,7 @@ class Database
     return $con;
   }
 
-  private function run($query, $data = array(), $data_type="object")
+  public function run($query, $data = array(), $data_type="object")
   {
     $con = $this->connect();
     $stm = $con->prepare($query);
@@ -28,7 +28,7 @@ class Database
         } else {
           $data = $stm->fetchAll(PDO::FETCH_ASSOC);
         }
-        if(is_array($data) && count($data) >0){
+        if(is_array($data) && count($data) > 0){
           return $data;
         }
       }
@@ -37,8 +37,5 @@ class Database
     return false;
   }
 
-  public function query()
-  {
-
-  }
+ 
 }
