@@ -8,14 +8,14 @@ class Database
 {
   private function connect()
   {
-    $string = "mysql:host=localhost;dbname=school_db";
+    $string = DBDRIVER . ":host=" . DBHOST . ";dbname=" . DBNAME;
     if(!$con = new PDO($string, 'root', '')){
       die("Could not connect to database");
     }
     return $con;
   }
 
-  public function run($query, $data = array(), $data_type="object")
+  public function query($query, $data = array(), $data_type="object")
   {
     $con = $this->connect();
     $stm = $con->prepare($query);
