@@ -7,6 +7,8 @@
 class Model extends Database
 {
 
+  protected $table;
+  
   function __construct()
   {
     // echo $this::class;
